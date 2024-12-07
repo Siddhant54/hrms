@@ -3,7 +3,7 @@ import React from 'react';
 // import Icon from 'react-native-vector-icons/FontAwesome6';
 import {StyleSheet, Text, View, Button, Alert, Image, TouchableOpacity} from 'react-native';
 
-const Header = ({title}) =>
+const Header = ({title,backButton=true}) =>
 {
   const navigation = useNavigation()
     return (
@@ -14,9 +14,12 @@ const Header = ({title}) =>
               navigation.goBack();
             }}>
           {/* <Icon name="home" size={50} color="blue" /> */}
-            <Image
+          {
+            backButton &&  <Image
             source={require('../../assets/icons/Vector.png')} 
           />
+          }
+           
             </TouchableOpacity>
           
           <View>
@@ -24,7 +27,7 @@ const Header = ({title}) =>
           </View>
         </View>
         <View>
-          <Image
+           <Image
             source={require('../../assets/Logo/hrmslogo.png')} // Replace with your image URL or require your local image
             style={styles.image}
           />

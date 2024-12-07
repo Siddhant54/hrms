@@ -8,13 +8,6 @@ const App = () => {
       {/* Set the StatusBar style and background color */}
       <StatusBar backgroundColor="#fff" barStyle="dark-content" />
       <View style={styles.container}>
-        {/* <Login /> */}
-        {/* <Login2 /> */}
-        {/* <ResetPass /> */}
-        {/* <ResetPass2 /> */}
-        {/* <ResetPass3 /> */}
-        {/* <PasswordSuccess /> */}
-        {/* <SplashScreen/> */}
         <AppNavigator />
       </View>
     </SafeAreaView>

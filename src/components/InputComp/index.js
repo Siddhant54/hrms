@@ -2,8 +2,9 @@ import React from 'react';
 import {View, Text, TextInput} from 'react-native';
 
 import Icon from 'react-native-vector-icons/Octicons';
+import CalendarIcon from 'react-native-vector-icons/SimpleLineIcons';
 
-const InputField = ({label, placeholder, value, onChangeText,type,emailTrue}) => {
+const InputField = ({label, placeholder, value, onChangeText,type,emailTrue,calendar}) => {
   let keyboardType = 'default';
   let secureTextEntry = false;
   if (type === 'email') {
@@ -35,6 +36,8 @@ const InputField = ({label, placeholder, value, onChangeText,type,emailTrue}) =>
           marginTop: 1,
         }}>
           {emailTrue &&   <Icon name="mail" size={20} color="#000" style={{marginRight: 5}} />
+        }
+        {calendar &&   <CalendarIcon name="calendar" size={20} color="#000" style={{marginRight: 5}} />
         }
         <TextInput
           style={{

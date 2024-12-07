@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import Header from '../../components/Header';
 import { useNavigation } from '@react-navigation/native';
 
-const PasswordSuccess = () => {
+const LeaveApplied = () => {
   const navigation = useNavigation(); // Get the navigation object
 
   useEffect(() => {
@@ -17,9 +17,9 @@ const PasswordSuccess = () => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <Header title={'Reset Password'} />
+      <Header title={'Leave Applied'} />
       <View style={styles.container}>
-        <Text style={styles.successMessage}>Password is set successfully</Text>
+        <Text style={styles.successMessage}>Leave Has Applied</Text>
       </View>
     </SafeAreaView>
   );
@@ -42,4 +42,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default PasswordSuccess;
+export default LeaveApplied;
